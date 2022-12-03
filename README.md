@@ -1,9 +1,9 @@
 # Project Title
-my content management system (cms)
-# Project Description
-A platform that allows users spin up a basic website,manage content,create, edit and publish.
-# Technologies Used:
-**HTML**
+My Content Management System (CMS)
+## Project Description
+A platform that allows users spin up a basic website,manage content,create, edit and publish sites.
+>**Technologies Used:*
+>>*HTML*
 *CSS
 *JAVASCRIPT
 *FIGMA
