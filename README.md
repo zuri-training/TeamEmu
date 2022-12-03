@@ -3,7 +3,7 @@ My Content Management System (CMS)
 ## Project Description
 A platform that allows users spin up a basic website,manage content,create, edit and publish sites.
 ## Technologies Used:
-*HTML*  
+_**HTML**  
 **CSS**  
 **JAVASCRIPT**  
 **FIGMA**  
