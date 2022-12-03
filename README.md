@@ -57,13 +57,15 @@ In the project repository on github, click the fork button in the upper right co
     ```
     
 - __Stage the file__
-After making edits, type the below command in your terminal
-    For all changed files at once: 
+ After making edits, type the below command in your terminal.
+ 
+    - For all changed files at once: 
+    
     ```ruby
     git add .
     ```
     
-    For a particular changed file: 
+    - For a particular changed file: 
     
     ```ruby
     git add <changed_files>
