@@ -68,7 +68,7 @@ In the project repository on github, click the fork button in the upper right co
     - For a particular changed file: 
     
     ```ruby
-    git add <changed_files>
+    git add <changed_file>
     ```
     
 - __Commit changes__
