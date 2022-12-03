@@ -113,8 +113,7 @@ In the project repository on github, click the fork button in the upper right co
           "start": "node src/server.js"
          }
  
- -You would then be able to run the server using npm by calling:
- 
+- You would then be able to run the server using npm by calling:
     ``` ruby
     npm run start
     ``` 
