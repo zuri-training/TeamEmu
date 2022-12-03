@@ -3,11 +3,11 @@ my content management system (cms)
 # Project Description
 A platform that allows users spin up a basic website,manage content,create, edit and publish.
 # Technologies Used:
-.HTML
-.CSS
-.JAVASCRIPT
-.FIGMA
-#Features
+HTML
+CSS
+JAVASCRIPT
+FIGMA
+# Features
 User: Unauthenticated
 Visit the platform to view basic information about it
 View and Interact with the documentation
