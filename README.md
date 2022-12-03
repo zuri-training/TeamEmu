@@ -4,9 +4,9 @@ My Content Management System (CMS)
 A platform that allows users spin up a basic website,manage content,create, edit and publish sites.
 ## Technologies Used:
 _**HTML**  
-**CSS**  
-**JAVASCRIPT**  
-**FIGMA**  
+_**CSS**  
+_**JAVASCRIPT**  
+_**FIGMA**  
 ### Features:
 **User: Unauthenticated**  
 Visit the platform to view basic information about it
