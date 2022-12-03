@@ -108,15 +108,16 @@ In the project repository on github, click the fork button in the upper right co
 - To Run Server:
  - Say, the application source is in a folder /src/server.js
  - Add this format to your package.json file, inside scripts :
-        "scripts" : {
+       
+       "scripts" : {
           "start": "node src/server.js"
          }
  
- -We would then be able to run server.js using npm by calling:
+ -You would then be able to run the server using npm by calling:
  
     ``` ruby
     npm run start
-    ```
+    ``` 
 
 
 ### Credits
