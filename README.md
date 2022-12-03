@@ -14,6 +14,7 @@ View and Interact with the documentation
 Register to setup a new website
 Setup website by filling out some information
 Browse through available templates 
+
 **User: Authenticated**  
 Full access to the platform
 Access to backend of created website
@@ -22,7 +23,7 @@ Ability to change template
 Unique address
 Ability to add social media links
 
-### How to Install and Run the Project
+### How to Install and Run the Project:
 
 
 ### Credits
