@@ -1,6 +1,7 @@
 # Project Title
 My Content Management System (CMS)
 ## Project Description
+A  content management system (CMS) is a piece of software which provides website authoring,collaboration and administration tools that help users with little knowledge of programming languages to create and manage website content.  
 A platform that allows users spin up a basic website,manage content,create, edit and publish sites.
 ## Technologies Used:
 _**HTML**  
@@ -34,5 +35,4 @@ Ability to add social media links
   
   @efezinoidisi  
   
-  @Telma-des  
   
