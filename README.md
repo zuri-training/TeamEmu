@@ -43,7 +43,7 @@ Ability to add social media links
 - Click on the "Code" button on the repo page
 - Copy the URL for the forked repo, it looks like this format: https://github.com/github_username/TeamEmu.git
 - Create a folder on your local machine to serve as your project workspace.
-- Open command prompt or termninal in the same folder location, then in the terminal, type:
+- Open command prompt or terminal in the same folder location, then in the terminal, type:
   ```ruby
   git clone https://github.com/github_username/TeamEmu.git
   ```
@@ -138,7 +138,12 @@ Ability to add social media links
 ```bash
 
 ├── Backend
-  ├──
+    ├── src
+      ├── config
+      ├── controllers
+      ├── models
+      ├── routes
+      ├── db
 ├── Frontend
     ├── assets
     ├── Css
