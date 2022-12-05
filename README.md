@@ -154,11 +154,11 @@ Ability to add social media links
 ### Credits
 
 <details> <summary>Frontend Developers</summary>
-  - [@Miss-shebly](https://github.com/Miss-shelby)  
+  - [@Miss-shebly](https://github.com/Miss-shelby)  <br>
   - [@efezinoidisi]()
 
 </details>
 <details> <summary>Backend Developers</summary>
-  - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)  
+  - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)  <br>
   - Rediet
 </details>
