@@ -15,6 +15,7 @@ _ **HTML**
 _ **CSS**  
 _ **JAVASCRIPT**  
 _ **FIGMA**
+_ **NodeJS**
 
 ### Features:
 
@@ -154,7 +155,10 @@ Ability to add social media links
 
 <details> <summary>Frontend Developers</summary>
  - [@Miss-shebly](https://github.com/Miss-shelby)
- - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)
  - [@efezinoidisi]()
 
+</details>
+<details> <summary>Backend Developers</summary>
+ - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)
+ - Rediet
 </details>
