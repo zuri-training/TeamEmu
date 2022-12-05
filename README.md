@@ -14,7 +14,7 @@ This project aims to help users spin up a basic website,manage content,create, e
 _ **HTML**  
 _ **CSS**  
 _ **JAVASCRIPT**  
-_ **FIGMA**
+_ **FIGMA**  
 _ **NodeJS**
 
 ### Features:
@@ -154,11 +154,11 @@ Ability to add social media links
 ### Credits
 
 <details> <summary>Frontend Developers</summary>
- - [@Miss-shebly](https://github.com/Miss-shelby)
- - [@efezinoidisi]()
+  - [@Miss-shebly](https://github.com/Miss-shelby)  
+  - [@efezinoidisi]()
 
 </details>
 <details> <summary>Backend Developers</summary>
- - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)
- - Rediet
+  - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)  
+  - Rediet
 </details>
