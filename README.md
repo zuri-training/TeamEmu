@@ -14,7 +14,8 @@ This project aims to help users spin up a basic website,manage content,create, e
 _ **HTML**  
 _ **CSS**  
 _ **JAVASCRIPT**  
-_ **FIGMA**
+_ **FIGMA**  
+_ **NodeJS**
 
 ### Features:
 
@@ -42,7 +43,7 @@ Ability to add social media links
 - Click on the "Code" button on the repo page
 - Copy the URL for the forked repo, it looks like this format: https://github.com/github_username/TeamEmu.git
 - Create a folder on your local machine to serve as your project workspace.
-- Open command prompt or termninal in the same folder location, then in the terminal, type:
+- Open command prompt or terminal in the same folder location, then in the terminal, type:
   ```ruby
   git clone https://github.com/github_username/TeamEmu.git
   ```
@@ -137,7 +138,12 @@ Ability to add social media links
 ```bash
 
 ├── Backend
-  ├──
+    ├── src
+      ├── config
+      ├── controllers
+      ├── models
+      ├── routes
+      ├── db
 ├── Frontend
     ├── assets
     ├── Css
@@ -153,8 +159,11 @@ Ability to add social media links
 ### Credits
 
 <details> <summary>Frontend Developers</summary>
- - [@Miss-shebly](https://github.com/Miss-shelby)
- - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)
- - [@efezinoidisi]()
+  - [@Miss-shebly](https://github.com/Miss-shelby)  <br>
+  - [@efezinoidisi]()
 
+</details>
+<details> <summary>Backend Developers</summary>
+  - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)  <br>
+  - Rediet
 </details>
