@@ -1,0 +1,38 @@
+{
+  "name": "teamemu",
+  "version": "1.0.0",
+  "description": "My Content Management System (CMS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "env-cmd -f ./Backend/config/dev.env nodemon Backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuri-training/TeamEmu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuri-training/TeamEmu/issues"
+  },
+  "homepage": "https://github.com/zuri-training/TeamEmu#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.8.0",
+    "nodemailer": "^6.8.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "uuid": "^9.0.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.20"
+  }
+}
