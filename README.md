@@ -110,11 +110,7 @@ Ability to add social media links
   node --version
   ```
 
-  if the output is not the version of your nodejs installation, install nodejs from :
-
-  ```ruby
-  [Here](https://nodejs.org/en/download/)
-  ```
+  if the output is not the version of your nodejs installation, install nodejs from **[HERE](https://nodejs.org/en/download/)**
 
 - Then install the dependencies after cloning the project, please use npm :
 
