@@ -34,7 +34,7 @@ Ability to change template
 Unique address
 Ability to add social media links
 
-[Data schema](https://drawsql.app/teams/aladeys-team/diagrams/teamemu-mycms)
+**[Data schema](https://drawsql.app/teams/aladeys-team/diagrams/teamemu-mycms)**
 
 ## How to Contribute
 
@@ -113,7 +113,7 @@ Ability to add social media links
   if the output is not the version of your nodejs installation, install nodejs from :
 
   ```ruby
-  https://nodejs.org/en/download/
+  [Here](https://nodejs.org/en/download/)
   ```
 
 - Then install the dependencies after cloning the project, please use npm :
