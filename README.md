@@ -34,7 +34,7 @@ Ability to change template
 Unique address
 Ability to add social media links
 
-[Data schema]([url](https://drawsql.app/teams/aladeys-team/diagrams/teamemu-mycms))
+[Data schema](https://drawsql.app/teams/aladeys-team/diagrams/teamemu-mycms)
 
 ## How to Contribute
 
