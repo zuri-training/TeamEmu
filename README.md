@@ -49,10 +49,10 @@ Ability to add social media links
   ```
 - **Navigate to the local directory and open in your IDE/ Text Editor**
 
-- **In the IDE terminal set main branch**
+- **In the IDE terminal, to view and confirm the remote origin**
 
   ```ruby
-  git remote add origin https://github.com/github_username/TeamEmu.git
+  git remote -v
   ```
 
 - **Pull origin**
