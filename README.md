@@ -138,12 +138,12 @@ Ability to add social media links
 ```bash
 
 ├── Backend
-    ├── src
     ├── config
     ├── controllers
     ├── models
     ├── routes
     ├── db
+    :- index.js
 ├── Frontend
     ├── assets
     ├── Css
