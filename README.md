@@ -155,6 +155,6 @@ Ability to add social media links
 <details> <summary>Frontend Developers</summary>
  - [@Miss-shebly](https://github.com/Miss-shelby)
  - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)
- - [@efezinoidisi]()
+ - [@efezinoidisi](https://github.com/efezinoidisi)
 
 </details>
