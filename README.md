@@ -4,7 +4,7 @@ My Content Management System (CMS)
 
 ## Project Description
 
-A content management system (CMS) is a piece of software which provides website authoring,collaboration and administration tools that help users with little knowledge of programming languages to create and manage website content.  
+A content management system (CMS) is a piece of software which provides website authoring,collaboration and administration tools that help users with little knowledge of programming languages to create and manage website content....  
 <br/>
 
 This project aims to help users spin up a basic website,manage content,create, edit and publish sites.
@@ -27,12 +27,12 @@ Setup website by filling out some information
 Browse through available templates
 
 **User: Authenticated**  
-Full access to the platform
-Access to backend of created website
-Ability to create more pages
-Ability to change template
-Unique address
-Ability to add social media links
+-Full access to the platform
+-Access to backend of created website
+-Ability to create more pages
+-Ability to change template
+-Unique address
+-Ability to add social media links
 
 **[Data schema](https://drawsql.app/teams/aladeys-team/diagrams/teamemu-mycms)**
 
