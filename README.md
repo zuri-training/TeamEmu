@@ -14,7 +14,8 @@ This project aims to help users spin up a basic website,manage content,create, e
 _ **HTML**  
 _ **CSS**  
 _ **JAVASCRIPT**  
-_ **FIGMA**
+_ **FIGMA**  
+_ **NodeJS**
 
 ### Features:
 
@@ -33,6 +34,8 @@ Ability to change template
 Unique address
 Ability to add social media links
 
+**[Data schema](https://drawsql.app/teams/aladeys-team/diagrams/teamemu-mycms)**
+
 ## How to Contribute
 
 - **Fork the project repository**<br/>
@@ -42,16 +45,16 @@ Ability to add social media links
 - Click on the "Code" button on the repo page
 - Copy the URL for the forked repo, it looks like this format: https://github.com/github_username/TeamEmu.git
 - Create a folder on your local machine to serve as your project workspace.
-- Open command prompt or termninal in the same folder location, then in the terminal, type:
+- Open command prompt or terminal in the same folder location, then in the terminal, type:
   ```ruby
   git clone https://github.com/github_username/TeamEmu.git
   ```
 - **Navigate to the local directory and open in your IDE/ Text Editor**
 
-- **In the IDE terminal set main branch**
+- **In the IDE terminal, to view and confirm the remote origin**
 
   ```ruby
-  git remote add origin https://github.com/github_username/TeamEmu.git
+  git remote -v
   ```
 
 - **Pull origin**
@@ -107,11 +110,7 @@ Ability to add social media links
   node --version
   ```
 
-  if the output is not the version of your nodejs installation, install nodejs from :
-
-  ```ruby
-  https://nodejs.org/en/download/
-  ```
+  if the output is not the version of your nodejs installation, install nodejs from **[HERE](https://nodejs.org/en/download/)**
 
 - Then install the dependencies after cloning the project, please use npm :
 
@@ -137,7 +136,12 @@ Ability to add social media links
 ```bash
 
 ├── Backend
-  ├──
+    ├── config
+    ├── controllers
+    ├── models
+    ├── routes
+    ├── db
+    :- index.js
 ├── Frontend
     ├── assets
     ├── Css
@@ -152,9 +156,20 @@ Ability to add social media links
 
 ### Credits
 
+<<<<<<< HEAD
 <details> <summary>Frontend Developers</summary>
  - [@Miss-shebly](https://github.com/Miss-shelby)
  - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy)
  - [@efezinoidisi](https://github.com/efezinoidisi)
+=======
+<details> <summary>Developers</summary>
+  - [@Miss-shebly](https://github.com/Miss-shelby) <br>
+  - [@efezinoidisi]() <br>
+  - [@Ademuyiwa-Joy](https://github.com/Ademuyiwa-Joy) <br>
+  - Rediet <br>
+>>>>>>> b49ce66ec5a51cc001f0568d59892be9a0561272
 
+</details>
+<details> <summary>Designers</summary>
+  
 </details>
