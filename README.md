@@ -164,8 +164,7 @@ Ability to add social media links
 
 </details>
 <details> <summary>Backend Developers</summary>
-  - [@Ademuyiwa-Joy]
-  (https://github.com/Ademuyiwa-Joy)
-  <br>
+  - (https://github.com/Ademuyiwa-Joy)
+    <br>
   - Rediet
 </details>
