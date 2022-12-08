@@ -163,3 +163,6 @@ Ability to add social media links
   - Rediet <br>
 
 </details>
+<details> <summary>Designers</summary>
+  
+</details>
