@@ -15,7 +15,7 @@ _ **HTML**
 _ **CSS**  
 _ **JAVASCRIPT**  
 _ **FIGMA**  
-_ **NodeJS**
+\_ **NodeJS**
 
 ### Features:
 
