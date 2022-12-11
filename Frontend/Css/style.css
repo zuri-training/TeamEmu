@@ -146,6 +146,9 @@ h5 {
   align-items: flex-start;
   border: 1px solid #efefef;
 }
+#unpublsd {
+  color: #cbc7c7;
+}
 #edit,
 #preview,
 #settings,
@@ -164,4 +167,7 @@ h5 {
 #delete {
   background-color: #cd3933;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
 }
