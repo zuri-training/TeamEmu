@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;   
+}
+h1{
+    margin: 20px;
+}
+.input{
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+}
+#section{
+    margin: 20px;
+}
+#submit{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #2b2eff;
+    border: none;
+    padding: 10px;
+    margin: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+div{
+    text-align: center;
+}
