@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section-container{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: #F5F5F5;;
+}
+.container{
+    display: flex;
+    height: 520px;
+    border-radius: 8px;
+}
+.signup-img{
+
+}
+.signup-img img{
+    height: 520px;
+    border-radius: 8px;
+}
+.cancel-btn{
+    position: relative;
+}
+.cancel{
+    position: absolute;
+    margin-top: 5px;
+    right: 4%;
+}
+.form-header{
+    text-align: center;
+    margin-top: 20px ;
+}
+.form-header h3{
+    font-size: 22px;
+    color: #2B292F;
+}
+.form-header p{
+    color: #605E65;
+    margin: 10px 0 ;
+}
+.form{
+ background-color: white; 
+border-radius: 8px;
+
+}
+label{
+    display: block;
+    margin-top: 10px;
+    color: #2B292F;
+}
+form{
+    width: 32vw;
+    padding: 0 25px;
+}
+
+form input{
+    width: 100%;
+    padding: 7px;
+    
+    background: #FFFFFF;
+    border: 0.5px solid rgba(17, 17, 17, 0.3);
+    border-radius: 4px;
+    
+}
+.first-label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#first{
+    margin-right: 20px;
+}
+.first-label label {
+    
+    
+}
+.signup-btn{
+    background: #4169E1;
+    padding: 8px 167px;
+        border-radius: 4px;
+        text-align: center;
+        border: none;
+        color: white;
+        margin: 15px 0;
+}
+.signup-paragraph{
+    padding-bottom: 10px;
+    text-align: center;
+    color: #606570;
+}
+.signup-paragraph a{
+    color: #605E65;
+    text-decoration: none;
+}
+@media (max-width:420px) {
+    .section-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+                .container {
+                    flex-direction: column;
+                }
+}
