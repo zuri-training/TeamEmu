@@ -30,18 +30,14 @@ body {
  }
  .general h4{
     font-weight: 600;
-        font-size: 32px;
+        font-size: 24px;
         color: #2B292F;
  }
  .general p{
     font-size: 16px;
     color: #605E65;
  }
- .my_cms{
-    background: #FFFFFF;
-   box-shadow: 0px 3px 8px rgba(17, 17, 17, 0.13);
-        border-radius: 8px;
- }
+
  .save{
     background: #4169E1;
         border-radius: 8px;
@@ -90,6 +86,14 @@ color: #111111;
  }
  .btn-last .btn{
    padding: 5px 100px;
+ }
+ .cms-btn {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 8px rgba(17, 17, 17, 0.13);
+    border-radius: 8px;
+    border: none;
+    padding: 4px 10px;
+
  }
  @media (min-width:200px) {
    
