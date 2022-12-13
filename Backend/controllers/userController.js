@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 exports.getLogin = (req, res) => res.render("login")
 
 //get registeration page
-exports.getRegister = (req, res) => res.render("register")
+exports.getRegister = (req, res) => res.render("signUp")
 
 
 //register user
@@ -48,7 +48,7 @@ exports.registerUser = (req, res) => {
 	}
 
 	if(errors.length > 0){
-		res.render("register", {
+		res.render("signUp", {
 			errors,
 			firstName,
 			lastName,
@@ -64,7 +64,7 @@ exports.registerUser = (req, res) => {
 		.then(user => {
 			if(user){
 				errors.push({msg: "Email already exists."})
-				res.render("register", {
+				res.render("signUp", {
 					errors,
 					firstName,
 					lastName,
@@ -209,100 +209,82 @@ exports.renderResetPassword = (req, res) => {
 
 //post reset password
 exports.postResetPassword = (req, res) => {
-	let {userId, resetString, newPassword} = req.body
+	let {userId, resetString, newPassword, confirmNewPassword} = req.body
 
-	PasswordReset.findOne({userId})
-	.then((result) => {
-		if(result){
-			//password reset request exists
-			//check if expiresAt is still valid
+	let errors = []
+	if(!newPassword || !confirmNewPassword){
+		errors.push({msg: "Fill in both fields."})
+	}
+	if( newPassword !== confirmNewPassword){
+		errors.push({msg: "Passwords do not match!"})
+	}
+	if(newPassword.length < 6){
+		errors.push({msg: "Password requires a minimum of 6 characters."})
+	}
+	if(errors.length > 0){
+		res.render("resetPassword", {
+			errors,
+			userId,
+			resetString
+		})
+	}else{
+		PasswordReset.findOne({userId})
+		.then((result) => {
+			if(result){
+				const {expiresAt} = result
+				const hashedResetString = result.resetString
 
-			const {expiresAt} = result
-			const hashedResetString = result.resetString
-
-
-			if(expiresAt < Date.now()){
-				PasswordReset.deleteOne({userId})
-				.then(() => {
-					res.json({
-						status: 'FAILED',
-						message: "Password reset link has expired."
+				if(expiresAt < Date.now()){
+					PasswordReset.deleteOne({userId})
+					.then(() => {
+						res.render("error", {message: "Reset password link has expired. Re-do this process."})
 					})
-				})
-				.catch((err) => {
-					res.json({
-						status: 'FAILED',
-						message: "Clearing password reset record failed."
+					.catch((err) => {
+						res.render("error", {message: "Internal server error :("})
 					})
-				})
-			}
-			else{
-				//since password reset link is valid
-				//compare hashed reset strings
-				bcrypt.compare(resetString, hashedResetString, (err, isMatch) => {
-					if(err){
-						res.json({
-							status: 'FAILED',
-							message: "Comparing password reset Strings failed."
-						})
-					}
-					else if(isMatch){
-						//strings match
-						//hash password again
-						bcrypt.hash(newPassword, 8)
-						.then(hashedNewPassword => {
-							//update user password
-
-							User.updateOne({_id: userId}, {password: hashedNewPassword})
-							.then(() => {
-								//update completed, now clear/delete password reset record
-								PasswordReset.deleteOne({userId})
-								.then(() => {	
-									req.flash('success_msg', "Password has been reset successfully.")
-									res.redirect("/users/login")	
-								})
-								.catch((err) => {
-									res.json({
-										status: 'FAILED',
-										message: "Error occured while finalizing password reset."
+				}
+				else{
+					bcrypt.compare(resetString, hashedResetString, (err, positive) => {
+						if(err){
+							res.render("error", {message: "Internal server error :("})
+						}
+						else if(positive){
+	
+							bcrypt.hash(newPassword, 8, (err, hashedNewPassword) => {
+								if(err){
+									return res.render("error", {message: "Internal server error :("})
+								}
+	
+							User.updateOne({_id: userId}, {password: hashedNewPassword})	
+								.then(() => {
+									PasswordReset.deleteOne({userId})
+									.then(() => {
+										req.flash('success_msg', "Your password has been reset successfully.")
+										res.redirect("/users/login")
+									})
+									.catch((err) => {
+										res.render("error", {message: "Internal server error :("})
 									})
 								})
-							})
-							.catch((err) => {
-								res.json({
-									status: 'FAILED',
-									message: "Error occured while updating user password."
+								.catch((err) => {
+									res.render("error", {message: "Internal server error :("})
 								})
 							})
-						})
-						.catch((err) => {
-							res.json({
-								status: 'FAILED',
-								message: "Error occured while hashing new password."
-							})
-						})
-					}
-					else{
-						res.json({
-							status: 'FAILED',
-							message: "Invalid password reset details passed."
-						})
-					}
-				})
+						}
+						else{
+							res.render("error", {message: "Reset string is invalid."})
+						}
+					})	
+				}
 			}
-		}else{
-			res.json({
-				status: 'FAILED',
-				message: "Password reset request not found."
-			})
-		}
-	})
-	.catch((err) => {
-		res.json({
-			status: 'FAILED',
-			message: "Checking for existing password reset record failed."
+			else{
+				res.render("error", {message: "Password reset request not found, please request for another..."})
+			}
 		})
-	})
+		.catch((err) => {
+			res.render("error", {message: "Internal server error :("})
+		})
+	}
 }
 
 //login user

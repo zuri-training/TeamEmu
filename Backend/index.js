@@ -20,6 +20,8 @@ app.use(expressLayouts) //partners with partials
 app.set('views', path.join(__dirname, 'views'))
 app.set("view engine", "ejs") //for rendering html pages with js
 
+
+app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended: true})) //allows any format of POST or PUT req from the client side (JSON, object etc)
 
 app.use(
