@@ -52,7 +52,7 @@ exports.review = (req, res) => {
 			res.redirect("/")
 		})
 		.catch((err) => {
-			res.json({
+			res.status(500).json({
 				status: 'FAILED',
 				message: "Could not send information."
 			})

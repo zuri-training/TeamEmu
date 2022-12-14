@@ -20,10 +20,22 @@ const transporter = nodemailer.createTransport({
 })
 
 //get login page
-exports.getLogin = (req, res) => res.render("login")
+exports.getLogin = (req, res) => {
+	try{
+		res.status(200).render("login")
+	}catch(e){
+		res.status(500).json({message: "Internal server error..."})
+	}
+}
 
 //get registeration page
-exports.getRegister = (req, res) => res.render("signUp")
+exports.getRegister = (req, res) =>{ 
+	try{
+		res.status(200).render("signUp")
+	}catch(e){
+		res.status(500).json({message: "Internal server error..."})
+	}
+}
 
 
 //register user
@@ -48,7 +60,7 @@ exports.registerUser = (req, res) => {
 	}
 
 	if(errors.length > 0){
-		res.render("signUp", {
+		res.status(200).render("signUp", {
 			errors,
 			firstName,
 			lastName,
@@ -64,7 +76,7 @@ exports.registerUser = (req, res) => {
 		.then(user => {
 			if(user){
 				errors.push({msg: "Email already exists."})
-				res.render("signUp", {
+				res.status(200).render("signUp", {
 					errors,
 					firstName,
 					lastName,
@@ -95,7 +107,7 @@ exports.registerUser = (req, res) => {
 						res.redirect("/users/login")
 					})
 					.catch((err) => {
-						res.json({
+						res.status(500).json({
 							status: 'FAILED',
 							message: "An error occured while saving user account."
 						})
@@ -104,7 +116,7 @@ exports.registerUser = (req, res) => {
 			}
 		})
 		.catch((err) => {
-			res.json({
+			res.status(500).json({
 				status: 'FAILED',
 				message: "An error occured while checking for existing user."
 			})
@@ -115,7 +127,11 @@ exports.registerUser = (req, res) => {
 
 //forgot password
 exports.forgotPassword = (req, res) => {
-	res.render("forgotPassword")
+	try{
+		res.status(200).render("forgotPassword")
+	}catch(e){
+		res.status(500).json({message: "Internal server error..."})
+	}
 }
 
 
@@ -137,7 +153,7 @@ exports.requestPasswordRequest = async (req, res) => {
 		}
 	}catch(err){
 		req.flash('error', err.message)
-		res.redirect("/users/forgotPassword")
+		res.status(500).redirect("/users/forgotPassword")
 	}
 }
 
@@ -161,7 +177,7 @@ const sendResetEmail = ({_id, email}, redirectUrl, res, req) => {
 		//hashing the resetString
 		bcrypt.hash(resetString, 8, (err, hashedResetString) => {
 			if(err){
-				res.json({
+				res.status(500).json({
 					status: 'FAILED',
 					message: "Error occured while hashing the resetString."
 				})		
@@ -184,19 +200,19 @@ const sendResetEmail = ({_id, email}, redirectUrl, res, req) => {
 					})
 					.catch((err) => {
 						req.flash('error', `Internal server error, please try again...`)	
-						res.redirect("/users/forgotPassword")
+						res.status(500).redirect("/users/forgotPassword")
 					})
 				})
 				.catch((err) => {
 					req.flash('error', `Internal server error, please try again...`)	
-					res.redirect("/users/forgotPassword")
+					res.status(500).redirect("/users/forgotPassword")
 				})
 			}
 		}) 
 	})
 	.catch((err) => {
 		req.flash('error', `Internal server error, please try again...`)	
-		res.redirect("/users/forgotPassword")
+		res.status(500).redirect("/users/forgotPassword")
 	})
 }
 
@@ -240,19 +256,19 @@ exports.postResetPassword = (req, res) => {
 						res.render("error", {message: "Reset password link has expired. Re-do this process."})
 					})
 					.catch((err) => {
-						res.render("error", {message: "Internal server error :("})
+						res.status(500).render("error", {message: "Internal server error :("})
 					})
 				}
 				else{
 					bcrypt.compare(resetString, hashedResetString, (err, positive) => {
 						if(err){
-							res.render("error", {message: "Internal server error :("})
+							res.status(500).render("error", {message: "Internal server error :("})
 						}
 						else if(positive){
 	
 							bcrypt.hash(newPassword, 8, (err, hashedNewPassword) => {
 								if(err){
-									return res.render("error", {message: "Internal server error :("})
+									return res.status(500).render("error", {message: "Internal server error :("})
 								}
 	
 							User.updateOne({_id: userId}, {password: hashedNewPassword})	
@@ -263,11 +279,11 @@ exports.postResetPassword = (req, res) => {
 										res.redirect("/users/login")
 									})
 									.catch((err) => {
-										res.render("error", {message: "Internal server error :("})
+										res.status(500).render("error", {message: "Internal server error :("})
 									})
 								})
 								.catch((err) => {
-									res.render("error", {message: "Internal server error :("})
+									res.status(500).render("error", {message: "Internal server error :("})
 								})
 							})
 						}
@@ -282,7 +298,7 @@ exports.postResetPassword = (req, res) => {
 			}
 		})
 		.catch((err) => {
-			res.render("error", {message: "Internal server error :("})
+			res.status(500).render("error", {message: "Internal server error :("})
 		})
 	}
 }
@@ -300,7 +316,7 @@ exports.loginUser = (req, res, next) => {
 exports.logoutUser = (req, res) => {
 	req.logout((err) => {
 		if(err){
-			return res.render("error", {message: "Internal server error..."})
+			return res.status(500).render("error", {message: "Internal server error..."})
 		}
 	})
 	req.flash("success_msg", "You are logged out")
