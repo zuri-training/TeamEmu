@@ -11,14 +11,14 @@
 }
 .container{
     display: flex;
-    height: 520px;
+    height: 510px;
     border-radius: 8px;
 }
 .signup-img{
 
 }
 .signup-img img{
-    height: 520px;
+    height: 510px;
     border-radius: 8px;
 }
 .cancel-btn{
@@ -48,22 +48,25 @@ border-radius: 8px;
 }
 label{
     display: block;
-    margin-top: 10px;
+    margin-top: 12px;
     color: #2B292F;
 }
 form{
-    width: 32vw;
-    padding: 0 25px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 form input{
     width: 100%;
-    padding: 7px;
-    
+    padding: 5px;
+    font-size: 13px;
     background: #FFFFFF;
     border: 0.5px solid rgba(17, 17, 17, 0.3);
     border-radius: 4px;
-    
+}
+::placeholder{
+    color: rgba(17, 17, 17, 0.3);
+    font-size: 11px;
 }
 .first-label{
     display: flex;
@@ -84,23 +87,40 @@ form input{
         text-align: center;
         border: none;
         color: white;
-        margin: 15px 0;
+        margin-top: 10px ;
 }
 .signup-paragraph{
-    padding-bottom: 10px;
+    padding: 10px 0;
     text-align: center;
     color: #606570;
 }
 .signup-paragraph a{
-    color: #605E65;
+    color:#4169E1;
     text-decoration: none;
 }
 @media (max-width:420px) {
     .section-container {
             width: 80%;
-            margin: 0 auto;
+                margin: 0 auto;
         }
-                .container {
-                    flex-direction: column;
-                }
+        .container {
+               flex-direction: column;
+        }
+        .signup-img img {
+           display: none;
+        }
+        .signup-img{
+            background-image: url(../assets/settings/signup-img.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        form{
+            width: 70%;
+            padding: 0 25px;
+        }
+        .signup-btn{
+         padding: 4px 50px;
+            width: 95%;
+        }
 }
