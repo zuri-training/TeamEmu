@@ -63,3 +63,7 @@ exports.review = (req, res) => {
 exports.templates = (req, res) => {
 	res.render('templates')	
 }
+
+exports.websiteTypes = (req, res) => {
+	res.render('websitetype')
+}

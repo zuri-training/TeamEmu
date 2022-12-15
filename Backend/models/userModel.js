@@ -23,5 +23,11 @@ const userSchema = new mongoose.Schema({
 	timestamps: true
 })
 
+userSchema.virtual('myTemplates', {
+	ref: 'Template',
+	localField: '_id',
+	foreignField: 'owner'
+})
+
 const User = mongoose.model('User', userSchema)
 module.exports = User;
