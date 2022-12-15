@@ -43,11 +43,15 @@ li {
   top: 1.875em;
   left: 22.0625em;
 }
-.user {
+#user {
   position: absolute;
   top: 2.125em;
-  right: 1%;
+  right: 10%;
+  font-size: 20px;
+  font-weight: 500;
 }
+
+
 /*********************** MAIN ***********************/
 main {
   display: flex;
@@ -99,11 +103,10 @@ h5 {
   color: #605e65;
 }
 #create {
-  float: right;
   background-color: #4169e1;
   color: #fff;
-  border-radius: 8px;
-  padding: 12px 32px;
+  border-radius: 7px;
+  padding: 8px 25px;
   border: none;
 }
 #my-cms {

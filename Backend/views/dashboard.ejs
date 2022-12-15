@@ -1,6 +1,5 @@
-<!-- <h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome, <%= user.firstName %>.</p>
-<a href="/users/logout" class="btn btn-secondary">Logout</a> -->
+<!-- <h1 class="mt-4">Dashboard</h1> -- -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +36,7 @@
             />
           </li>
           <li>
-            <img class="user" src="../assets/dashboard/user.png" alt="user" />
+            <p id="user" class="lead mb-3">Welcome, <%= user.firstName %> <span class="wave">🖐🏽</span></p>
           </li>
         </ul>
       </nav>
@@ -57,12 +56,15 @@
           </section>
           <section>
               <img src="../assets/dashboard/setting-2.png" alt="world" /> 
-              <a href="/generalSettings">
+              <a style="text-decoration: none; color: black;" href="/generalSettings">
                 Settings
               </a>
           </section>
           <section>
             <img src="../assets/dashboard/help.png" alt="world" /> help
+          </section>
+          <section>
+          <a href="/users/logout"><button id="create">Logout</button></a>
           </section>
         </div>
       </div>
@@ -70,7 +72,7 @@
       <div class="right-container">
         <section class="right-container-header">
           <h1>Website Manager</h1>
-          <button id="create">Create New</button>
+          
           <br />
           <h5>Manage your Website</h5>
         </section>
@@ -86,7 +88,7 @@
           <p>My_Cms</p>
           <p id="unpublsd">Unpublished</p>
 		  <a href="/editWebsite">
-			<button id="edit">Edit Website</button>
+			<button id="edit">Edit Template</button>
 		  </a>
           <button id="preview">Preview Website</button>
           <button id="settings">Website Settings</button>
