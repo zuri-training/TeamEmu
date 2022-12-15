@@ -126,7 +126,6 @@ background: #4169E1;
     border-radius: 4px;
     color: #FFFFFF;
     border: none;
-    padding: 4px 60px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +150,7 @@ label {
     display:flex ;
     justify-content: center;
     margin-top: 10px;
-    padding: 0 40px;
+  
 }
 .save-btn{
     display: flex;
@@ -160,7 +159,7 @@ label {
    
 }
 
-@media (min-width:1200px) {
+@media (min-width:1000px) {
     body{
         width: 100%;
     }
