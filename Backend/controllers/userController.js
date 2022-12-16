@@ -60,7 +60,7 @@ exports.registerUser = (req, res) => {
 	}
 
 	if(errors.length > 0){
-		res.status(200).render("signUp", {
+		res.render("signUp", {
 			errors,
 			firstName,
 			lastName,
@@ -76,7 +76,7 @@ exports.registerUser = (req, res) => {
 		.then(user => {
 			if(user){
 				errors.push({msg: "Email already exists."})
-				res.status(200).render("signUp", {
+				res.render("signUp", {
 					errors,
 					firstName,
 					lastName,
@@ -104,7 +104,7 @@ exports.registerUser = (req, res) => {
 					.then(() => {
 						//Here, registration is successful and they are carried to the LOG IN PAGE!!
 						req.flash('success_msg', "Registration successful, you can now log in.")
-						res.redirect("/users/login")
+						res.status(201).redirect("/users/login")
 					})
 					.catch((err) => {
 						res.status(500).json({
