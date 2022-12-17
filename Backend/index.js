@@ -7,16 +7,21 @@ const passport = require("passport")
 const indexRouter = require('./routes/indexRoute')
 const userRoute = require('./routes/userRoute')
 const path = require('path')
+const fileUpload = require('express-fileupload') 
 
 
 const app = express()
-
+app.use(express.json({extended: true}))
+app.use(express.urlencoded({extended: true}));
 
 require("./middleware/passport")(passport)
 
+
+// for jest testing comment the line below: --> require("./db/mongoose") 
 require("./db/mongoose")
 
 app.use(expressLayouts) //partners with partials
+app.use(fileUpload())
 app.set('views', path.join(__dirname, 'views'))
 app.set("view engine", "ejs") //for rendering html pages with js
 
@@ -48,6 +53,11 @@ app.use(function(req, res, next){
 app.use("/", indexRouter)
 app.use("/users", userRoute)
 
+
+// for jest testing uncomment the 3 lines below: --> app.listen...
 app.listen(port, () => {
 	console.log(`Server is running on port ${port}`)
 })
+
+// for jest testing uncomment the line below: --> module.exports = app 
+// module.exports = app

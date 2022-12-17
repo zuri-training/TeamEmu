@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="alert alert-secondary text-center">
+        <h1>ALL POSTS</h1>    
+    </div>
+        
+    <table class="table table-bordered">
+        <thead class="bg-dark text-center">
+        <tr class="text-white">          
+            <th>heroHeadline</th>
+            <th>pageParagraph</th>
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        {{#each}}
+            <tr>               
+                <td>{{posts.heroHeadline}}</td>
+                <td>{{posts.pageParagraph}}</td>
+            </tr>    
+        {{/each}}
+        
+        </tbody>
+    </table>
+    
+    
+</div>
