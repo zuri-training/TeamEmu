@@ -210,6 +210,10 @@ form input:focus-visible {
         width: 100%;
     }
 
+    .form {
+        width: 90%;
+    }
+
     .container {
         flex-direction: column;
         width: 100%;
@@ -221,15 +225,16 @@ form input:focus-visible {
     }
 
     .signup-img {
-        height: 13rem;
+        height: 11rem;
     }
 
     .signup-img-content h2 {
-        font-size: 2rem;
-        line-height: 34px;
+        font-size: 1.5rem;
+        line-height: 1.5;
     }
 
     .signup-img-content p {
         font-size: 0.8rem;
+        line-height: 1.5;
     }
 }
