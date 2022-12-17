@@ -23,18 +23,9 @@
       <nav>
         <ul>
           <li>
-            <img class="logo" src="../assets/dashboard/logo.png" alt="logo" />
+            <img style="margin-left: 50px;" class="logo" src="../assets/dashboard/logo.png" alt="logo" />
           </li>
-          <li>
-            <img class="site" src="../assets/dashboard/site.png" alt="site" />
-          </li>
-          <li>
-            <img
-              class="search"
-              src="../assets/dashboard/search.png"
-              alt="search"
-            />
-          </li>
+          
           <li>
             <p id="user" class="lead mb-3">Welcome, <%= user.firstName %> <span class="wave">🖐🏽</span></p>
           </li>
@@ -74,7 +65,7 @@
           <h1>Website Manager</h1>
           
           <br />
-          <h5>Manage your Website</h5>
+          <h5 style="margin-top: 5px; margin-left: 5px;">Manage your Website</h5>
         </section>
         <section id="webnav">
           <span id="web-btn">Website</span>
@@ -87,13 +78,11 @@
         <section>
           <p>My_Cms</p>
           <p id="unpublsd">Unpublished</p>
-		  <a href="/editWebsite">
-			<button id="edit">Edit Template</button>
+		  <a href="/tempage">
+			<button id="edit">Template Editor</button>
 		  </a>
-          <button id="preview">Preview Website</button>
-          <button id="settings">Website Settings</button>
-          <button id="delete">Delete</button>
-        </section>
+          <a href="/posts"><button id="preview">Preview Website(s)</button></a>
+          
       </div>
     </main>
   </body>
