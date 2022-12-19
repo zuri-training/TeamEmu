@@ -72,35 +72,39 @@ exports.websiteTypes = (req, res) => {
 }
 
 //sending all posts
-exports.getPosts = (req, res) => {
-	Post.find()
-	.then(posts => {
-		res.json({posts})
-	})
-	.catch((e) => {
+exports.getPosts = async(req, res) => {
+	try{
+		const posts = await Post.find({owner: req.user._id})
+
+		res.render('postsIndex', {posts: posts}) 
+	}catch{
 		res.status(500).render('error', {message: e.message})
-	})
+	}
 }
 
-exports.submitPost = (req, res) => {
+exports.submitPost = (req, res, next) => {
 
-	// Check for any input file
 	let filename1 = '';
 	let filename2 = '';
 	let filename3 = '';
 	// let filename4 = '';
 	// let filename5 = '';
-	
+	try{
+			
    if(!isEmpty(req.files)) {
-	   let file1 = req.files.image1;
-	   let file2 = req.files.image2;
-	   let file3 = req.files.image3;
+	// if(!req.files.image1 || !req.files.image2 || !req.files.image3){
+	// 	res.render('error', {message: "All three images are required, please."})
+	// }
+	   let file1 = req.files.image1
+	   let file2 = req.files.image2
+	   let file3 = req.files.image3
 	//  let file4 = req.files.image4;
 	//  let file5 = req.files.image5;
+
 	   
-		filename1 = file1.name;
-		filename2 = file2.name;
-		filename3 = file3.name;
+		filename1 = file1.name
+		filename2 = file2.name
+		filename3 = file3.name
 		// filename4 = file4.name;
 		// filename5 = file5.name;
 
@@ -127,24 +131,36 @@ exports.submitPost = (req, res) => {
 		// 		res.status(500).render('error', {message: err.message});
 		// });
    }
+   const newPost = new Post({
+	heroHeadline: req.body.heroHeadline, 
+	heroParagraph: req.body.heroParagraph, image1: `https://teamemu.onrender.com/uploads/${filename1}`,
+	pageHeadline: req.body.pageHeadline, pageParagraph: req.body.pageParagraph, image2: `https://teamemu.onrender.com/uploads/${filename2}`,
+	serviceHeading: req.body.serviceHeading, ourServices: req.body.ourServices, image3: `https://teamemu.onrender.com/uploads/${filename3}`,
+	facebook: req.body.facebook, twitter: req.body.twitter, instagram: req.body.instagram,
+	footerText: req.body.footerText,
+	owner: req.user._id
+
+	// image4: `/uploads/${filename4}`,
+	// image5: `/uploads/${filename5}`,
+	});
+		newPost.save()
 	
-	const newPost = new Post({
-		heroHeadline: req.body.heroHeadline, heroParagraph: req.body.heroParagraph, image1: `https://teamemu.onrender.com/uploads/${filename1}`,
-		pageHeadline: req.body.pageHeadline, pageParagraph: req.body.pageParagraph, image2: `https://teamemu.onrender.com/uploads/${filename2}`,
-		serviceHeading: req.body.serviceHeading, ourServices: req.body.ourServices, image3: `https://teamemu.onrender.com/uploads/${filename3}`,
-		facebook: req.body.facebook, twitter: req.body.twitter, instagram: req.body.instagram,
-		footerText: req.body.footerText,
-		owner: req.user._id,
+		res.render('successpage')
+	
+	}catch(e){
+		res.render('error', {message: "All three images are required, please"})
+	}
+	
+	
 
-		// image4: `/uploads/${filename4}`,
-		// image5: `/uploads/${filename5}`,
-	});
+}
 
-	newPost.save().then(post => {
+
+
+exports.getOnePost = (req, res) => {
+	Post.findOne({}, {}, { sort: { 'created_at' : 1 } }, function(err, post) {
 		res.json({post})
-	}).catch((e) => {
-		res.status(500).json({"error": e.message})
-	});
+	  });
 }
 
 

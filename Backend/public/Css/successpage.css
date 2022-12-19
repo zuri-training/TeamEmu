@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav .bell img {
+    position: absolute;
+    left: 70%;
+    display: none;
+}
+.box {
+    height: 60vh;
+    width: 42%;
+    margin: 70px auto;
+    background: #ffff;
+
+    /* line-height: 20px; */
+    box-shadow: 0px 4px 14px rgba(17, 17, 17, 0.25);
+    border-radius: 16px;
+    position: relative;
+}
+
+input {
+    display: block;
+    background: #FFFFFF;
+    border: 0.5px solid rgba(17, 17, 17, 0.3);
+    border-radius: 6px;
+}
+
+.btn-flex button {
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 12px;
+    color: #403E46;
+    border: 0.5px solid #4169E1;
+    border-radius: 8px;
+    padding: 2px 4px;
+}
+
+.btn-flex a{
+    text-decoration: none;
+}
+.btn-flex .dashboard-btn {
+    background: #4169E1;
+    color: #FFFFFF;
+}
+footer {
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    color: #2B292F;
+
+}
+
+footer a {
+    color: #2B292F;
+    text-decoration: none;
+}
+@media (max-width:520px) {
+    nav {
+        position: relative;
+    }
+
+    nav .bell img {
+        position: absolute;
+        left: 60%;
+        bottom: 30%;
+        display: block;
+    }
+
+    .box {
+        height: 77vh;
+        width: 62%;
+        padding: 0 10px;
+    }
+
+    input {
+        width: 80%;
+
+    }
+
+    .btn-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-flex button {
+        margin: 5px 0;
+        width: 45%;
+
+    }
+}
