@@ -59,11 +59,14 @@
                     <div class="card-body">
                         <h2 class="card-title"><%= post.heroHeadline %></h2>
                         <p class="card-text"><%= post.pageParagraph %></p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>    
+                        <a href="/posts/<%= post._id %>" class="btn btn-primary">Read More &rarr;</a>    
                     </div>                
                     <div class="card-footer text-muted">
                         Posted on <%= post.createdAt %> by
                         <a href="#">Admin</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Your unique address: <a href="/posts/<%= post._id %>">https://teamemu.onrender.com/posts/<%= post._id %></a>
                     </div>
                 </div>
     
