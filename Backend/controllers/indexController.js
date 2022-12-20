@@ -155,15 +155,6 @@ exports.submitPost = (req, res, next) => {
 
 }
 
-
-
-exports.getOnePost = (req, res) => {
-	Post.findOne({}, {}, { sort: { 'created_at' : 1 } }, function(err, post) {
-		res.json({post})
-	  });
-}
-
-
 exports.tempage = (req, res) => {
 	res.render('tempage')
 }
@@ -174,4 +165,44 @@ exports.gamers = (req, res) => {
 
 exports.realEstate = (req, res) => {
 	res.render('real-estate')
+}
+
+exports.getOnePost = (req, res) => {
+	const id = req.params.id
+	Post.findById(id)
+	.then(post => {
+		if(!post){
+			res.status(404).json({message: "Not post found"})
+		}else{
+			res.render('onePost', {post: post})
+		}
+	})
+}
+
+exports.admin = async(req, res) => {
+	try{
+		const posts = await Post.find({owner: req.user._id})
+
+		res.render('adminIndex', {posts: posts}) 
+	}catch{
+		res.status(500).render('error', {message: e.message})
+	}
+}
+
+exports.deletePost = async(req, res) => {
+	Post.findByIdAndDelete(req.params.id)
+            .then(deletedPost => {
+                req.flash('success_msg', `The site with hero headline "${deletedPost.heroHeadline}" has been deleted.`);
+                res.redirect('/admin');
+            }).catch((e) => {
+				res.status(500).render('error', {message: e.message})				
+			})
+}
+
+exports.doc = (req, res) => {
+	res.render('doc')
+}
+
+exports.template = (req, res) => {
+	res.render('template')
 }
