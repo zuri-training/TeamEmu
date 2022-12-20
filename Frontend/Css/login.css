@@ -5,33 +5,62 @@
 }
 
 .section-container {
-    display: flex;
-    justify-content: center;
-    padding: 100px 0;
-    background-color: #F5F5F5;
-    ;
+    width: 100%;
 }
 
 .container {
     display: flex;
-    height: 400px;
+    height: 100vh;
+    width: 100%;
     border-radius: 8px;
 }
 
-.signup-img img {
-    width: 300px;
-    height: 400px;
-    border-radius: 8px;
+.signup-img {
+    background: linear-gradient(0deg, rgba(43, 41, 47, 0.56), rgba(43, 41, 47, 0.56)),
+        url(../assets/settings/signup-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+    display: flex;
+
 }
 
-.cancel-btn {
-    position: relative;
+.signup-img-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    gap: 2rem;
+    color: #fff;
+
 }
 
-.cancel {
-    position: absolute;
-    margin-top: 5px;
-    right: 4%;
+.signup-img-content h2 {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+.signup-img-content p {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+
+    text-align: center;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .form-header {
@@ -62,18 +91,27 @@ label {
 }
 
 form {
-    width: 30vw;
-    padding: 0 25px;
+    width: 90%;
+}
+
+form label {
+    padding-bottom: 0.5rem;
+    display: block;
 }
 
 form input {
     width: 100%;
     padding: 7px;
-
+    margin-top: 0.3rem;
     background: #FFFFFF;
     border: 0.5px solid rgba(17, 17, 17, 0.3);
     border-radius: 4px;
 
+}
+
+form input:focus-visible {
+    outline: none;
+    border: 0.5px solid #4169E1;
 }
 
 .flex {
@@ -98,6 +136,7 @@ form input {
     margin-left: 10px;
 }
 
+
 .signup-btn {
     background: #4169E1;
     padding: 8px 1.5rem;
@@ -106,6 +145,7 @@ form input {
     border: none;
     color: white;
     text-decoration: none;
+    width: 60%;
 
 }
 
@@ -125,4 +165,76 @@ form input {
 .signup-paragraph a {
     color: #605E65;
     text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    .signup-img {
+        height: 20rem;
+        width: 100%;
+    }
+
+
+    .form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .section-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .submit {
+        padding-bottom: 1rem;
+    }
+
+    .signup-btn {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .section-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .cancel-btn {
+        display: none;
+    }
+
+    .signup-img {
+        height: 11rem;
+    }
+
+    .signup-img-content h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .signup-img-content p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
 }

@@ -96,35 +96,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 7rem;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 99%;
 }
 
-.slider {
-    /* display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 33%;
-    width: 100%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain; */
+.carousel-inner {
     display: flex;
-    width: 90%;
-    overflow-x: auto;
-    transform: translateX(calc(var(--slider-index) * -100%));
+    width: 100%;
 }
 
-.slider>img {
-    flex: 0 0 25%;
-    width: 45%;
-    aspect-ratio: 10/9;
-    padding-left: .25rem;
+.carousel-item img {
+    flex: 0 0 35%;
+    width: 30%;
+    aspect-ratio: 12/9;
+    padding-left: 1rem;
 }
 
 .slider-arrow {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.direction {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     color: blue;
+    border: none;
+    background: none;
     font-size: 2rem;
     padding-left: 1rem;
 }
@@ -176,10 +176,30 @@
 }
 
 
+.confirm {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    align-items: center;
+
+}
+
+.confirm label {
+    font-size: 0.8rem;
+}
+
 @media screen and (min-width:600px) {
     .navbar {
         width: 90%;
         margin: 0 auto;
+    }
+
+    .confirm label {
+        font-size: 1rem;
+    }
+
+    .carousel-item img {
+        padding-left: 5rem;
     }
 
     .wrapper {
@@ -205,7 +225,26 @@
         margin: 2rem auto;
         flex-direction: row;
     }
+
+
+    .footer-content {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 3rem;
+    }
+
+    .social-icons {
+        display: flex;
+        width: 8%;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
+
+
 
 
 @media screen and (min-width:900px) {
@@ -307,19 +346,5 @@
         background-repeat: no-repeat;
     }
 
-    .footer-content {
-        display: flex;
-        width: 90%;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        padding-top: 3rem;
-    }
 
-    .social-icons {
-        display: flex;
-        width: 8%;
-        justify-content: space-between;
-        align-items: center;
-    }
 }
