@@ -178,3 +178,31 @@ exports.getOnePost = (req, res) => {
 		}
 	})
 }
+
+exports.admin = async(req, res) => {
+	try{
+		const posts = await Post.find({owner: req.user._id})
+
+		res.render('adminIndex', {posts: posts}) 
+	}catch{
+		res.status(500).render('error', {message: e.message})
+	}
+}
+
+exports.deletePost = async(req, res) => {
+	Post.findByIdAndDelete(req.params.id)
+            .then(deletedPost => {
+                req.flash('success_msg', `The site with hero headline "${deletedPost.heroHeadline}" has been deleted.`);
+                res.redirect('/admin');
+            }).catch((e) => {
+				res.status(500).render('error', {message: e.message})				
+			})
+}
+
+exports.doc = (req, res) => {
+	res.render('doc')
+}
+
+exports.template = (req, res) => {
+	res.render('template')
+}
