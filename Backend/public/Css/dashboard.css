@@ -204,4 +204,28 @@ a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (max-width: 500px) {
+  .right-main{
+    display: flex;
+    flex-direction: column; 
+  }
+
+  #create{
+    margin-left: -23px;
+  }
+
+  .now{
+    margin-top: -50px;
+    margin-left: -30px;
+  }
+  #edit{
+    margin-top: 10px;
+  }
+  #preview{
+    margin-top: 10px
+  }
+  #image{
+    margin-top: -20px;
+    margin-left: -30px;
+  }
+}
