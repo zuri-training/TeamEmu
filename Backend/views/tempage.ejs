@@ -14,7 +14,7 @@
 <body>
     <nav
         class="navbar  navbar-expand-lg navbar-light d-flex justify-content-between w-100 border-bottom px-5 d-flex align-items-center">
-        <a class="navbar-brand ml-3" href="#">
+        <a style="margin-left: 50px;" class="navbar-brand ml-3" href="#">
             <img src="../assets/settings/logo.svg" alt="logo" class="">
         </a>
         <div class="d-flex justify-content-end bell">
@@ -36,23 +36,43 @@
                 <li class="nav-item active">
                     <a class="nav-link active  " aria-current="page" href="/admin"> Admin</a>
                 </li>
-                <!-- <li class="nav-item active">
-                    <a class="nav-link active " aria-current="page" href="#"> Contact Us</a>
-                </li> -->
             </ul>
         </div>
         <div class="collapse navbar-collapse justify-content-end">
-            <span style="margin-right: 15px;" id="now">✏️</span>
+            <div class="collapse navbar-collapse justify-content-end">
+                <span style="margin-right: 15px;" id="now">✏️</span>
+            </div>
         </div>
     </nav>
     <div class="box text-center ">
         <h4 class="pt-5">Pick your favorite homepage design</h4>
-        <div class="box-container d-flex mt-3">
-            <div class="box1 me-2"> <a href="/gamers"><img src="../assets/settings/Template1.png" alt="" srcset=""></a></div>
-            <div class="box3 me-2"><a href="/realEstate"><img src="../assets/settings/image 66.png" alt="" srcset=""></a></div>
-            <div class="box2 me-2"><a><img src="../assets/settings/image 68 (1).png" alt="" srcset=""></a></div>
-            <div class="box4 me-2"><a><img src="../assets/settings/image 69.png" alt="" srcset=""></a></div>
+        <!-- <div class="box-container d-flex mt-3 ">
+                <div class="box1 me-2"> <a href="http://"><img src="../assets/settings/Template1.png" alt="" srcset=""></a></div>
+                 <div class="box2 me-2"><a href="http://"><img src="../assets/settings/image 68 (1).png" alt="" srcset=""></a></div>
+                 <div class="box3 me-2"><a href="http://"><img src="../assets/settings/image 66.png" alt="" srcset=""></a></div>
+                <div class="box4 me-2"><a href="http://"><img src="../assets/settings/image 69.png" alt="" srcset=""></a></div>
+        </div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-6">
+                    <a href="/gamers">
+                        <img src="../assets/settings/Template1.png" alt="" srcset="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6 d-sm-none d-md-block hidden">
+                    <a href="/realEstate">
+                        <img src="../assets/settings/image 66.png" alt="" srcset="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <img src="../assets/settings/image 68 (1).png" alt="" srcset="">
+                </div>
+                <div class="col-md-3 col-sm-6 col-6 d-sm-none d-md-block hidden">
+                    <img src="../assets/settings/image 69.png" alt="" srcset="">
+                </div>
+            </div>
         </div>
+        
         <footer class="px-3">
             <p> &larr; <a href="/dashboard">Back</a></p>
             <p><a href="/editWebsite">skip</a></p>

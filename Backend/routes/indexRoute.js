@@ -5,7 +5,8 @@ const {welcomePage, dashboard, editWebsite,
 	templates, websiteTypes, getPosts, submitPost,
 	tempage, gamers, realEstate, getOnePost,
 	admin, deletePost, doc, template,
-	submitPost2, getTwoPost, editWebsite2} = require("../controllers/indexController")
+	submitPost2, getTwoPost, editWebsite2,
+	gamers5, realEstate5} = require("../controllers/indexController")
 
 router.get("/", forwardAuthenticated, welcomePage)
 router.get("/dashboard", ensureAuthenticated, dashboard)
@@ -23,7 +24,9 @@ router.get('/posts/:id',  getOnePost)
 router.get('/posts/:id',  getTwoPost)
 router.get('/tempage', tempage)
 router.get('/gamers', ensureAuthenticated, gamers)
+router.get('/gamers5', gamers5)
 router.get('/realEstate', ensureAuthenticated, realEstate)
+router.get('/realEstate5', realEstate5)
 router.get('/admin', ensureAuthenticated, admin)
 router.post('/deletePost/:id', ensureAuthenticated, deletePost)
 router.get('/doc', doc)

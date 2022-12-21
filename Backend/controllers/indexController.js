@@ -252,3 +252,11 @@ exports.doc = (req, res) => {
 exports.template = (req, res) => {
 	res.render('template')
 }
+
+exports.gamers5 = (req, res) => {
+	res.render('gamers5')
+}
+
+exports.realEstate5 = (req, res) => {
+	res.render('real-estate5')
+}
