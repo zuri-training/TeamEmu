@@ -10,8 +10,8 @@ nav .bell img {
 }
 
 .box {
-    height: 90vh;
-    width: 70%;
+    height: 90%;
+    width: 80%;
     margin: 70px auto;
     background: #ffff;
     box-shadow: 0px 4px 14px rgba(17, 17, 17, 0.25);
@@ -64,7 +64,7 @@ footer a {
     text-decoration: none;
 }
 
-@media (max-width:520px) {
+@media (max-width:600px) {
     nav {
         position: relative;
     }
@@ -98,4 +98,12 @@ footer a {
         width: 45%;
 
     }
+}
+@media (max-width:800px) {
+        .box {
+        
+            width: 100%;
+            padding: 0 10px;
+        }
+    
 }

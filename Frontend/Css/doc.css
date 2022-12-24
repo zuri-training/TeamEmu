@@ -33,3 +33,13 @@ footer p{
         width: 70px;
     }
 }
+@media (max-width:900px) {
+    .nav-end{
+        display: none;
+    }
+    .navbar-nav{
+        display: flex;
+        justify-content: end;
+        margin: 40px;
+    }
+}
